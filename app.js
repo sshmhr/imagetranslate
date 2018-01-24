@@ -8,6 +8,7 @@ var app = express();
 const projectId = 'viz-wiz';
 const client = new vision.ImageAnnotatorClient();
 app.use(express.static("./public"));
+app.use(express.static( __dirname +"/static" ));
 var x="",y= "",ext="";
 var storage = multer.diskStorage({
     destination : './public/uploads',
@@ -42,7 +43,9 @@ function checkFileType(file, cb){
 
 // Routes
 app.get("/",function(req,res){
-    res.render("index.ejs");
+    // res.render("index.ejs");
+    // res.render("homepage");
+    res.sendFile(__dirname + '/public/homepage.html');
 });
 
 app.post("/upload",function(req,res){
