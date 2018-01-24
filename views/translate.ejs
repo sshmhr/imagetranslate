@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translated text</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+</head>
+<body>
+<div class = "ui container">
+    <p>
+             <% var testVar = out %>
+            <% var y = testVar.replace(/।./g, ".\n"); %>
+            <% var x= y.split(/\n/)%>
+            <% for(var i=0;i<x.length;i++){ %>
+                <%= x[i] %>
+                <br>
+            <% } %>
+           <!--<%- out %>-->
+    </p>
+</div>
+</body>
+</html>
