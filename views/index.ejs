@@ -8,9 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   
   <title>Node File Uploads</title>
+  <style>
+    #viz{
+      margin-left: 50px;
+    }
+       .nav-wrapper .brand-logo img {
+       max-height: 64px;
+       margin-left: 200px;
+      }
+  </style>
 </head>
 <body>
   <% var lang = "hi" %>
+   <nav>
+    <div class="nav-wrapper">
+      <div>
+      <a href="/" class="brand-logo"><img src="/images/vr-logo.png"></a>
+      <a href="/" class="brand-logo" id="viz">Viz Reality</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li  class="active"><a href="/translate">Upload Image</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+        
   <div class="container">
     <h1>File Upload</h1>
     <%= typeof msg != 'undefined' ? msg : '' %>

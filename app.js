@@ -44,8 +44,11 @@ function checkFileType(file, cb){
 // Routes
 app.get("/",function(req,res){
     // res.render("index.ejs");
-    // res.render("homepage");
     res.sendFile(__dirname + '/public/homepage.html');
+});
+
+app.get("/translate",function(req, res) {
+    res.render("index.ejs");
 });
 
 app.post("/upload",function(req,res){
@@ -108,6 +111,10 @@ app.get("/translate/:lang",function(req,res){
           console.error('ERROR:', err);
         });
 });
+
+app.get("*",function(req, res) {
+    res.redirect("/");
+})
 
 app.listen(process.env.PORT,process.env.IP,function(){
   console.log("Server Started :)");
