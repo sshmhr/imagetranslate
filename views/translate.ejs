@@ -3,10 +3,51 @@
 <head>
     <title>Translated text</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+     <style>
+    #viz{
+      margin-left: 50px;
+    }
+    body{
+      margin-bottom:80px;
+    }
+       .nav-wrapper .brand-logo img {
+       max-height: 64px;
+       margin-left: 200px;
+      }
+      #rit{
+        float:right;
+        margin-bottom:200px;
+      }
+  </style>
+    <style>
+       #a{
+           margin-top:50px;  
+           text-align:center;
+        }
+        body{
+        font-family: 'Roboto', sans-serif;
+        font-size:2.7em;
+        }
+    </style>
 </head>
 <body>
+     <nav>
+    <div class="nav-wrapper">
+      <div>
+      <a href="/" class="brand-logo"><img src="/images/vr-logo.png"></a>
+      <a href="/" class="brand-logo" id="viz">Viz Reality</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li  class="active"><a href="/translate">Upload Image</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
 <div class = "ui container">
-    <p>
+    <div id="a" class="ui container segment top attached item">
+        
              <% var testVar = out %>
             <% var y = testVar.replace(/।./g, ".\n"); %>
             <% var x= y.split(/\n/)%>
@@ -15,7 +56,13 @@
                 <br>
             <% } %>
            <!--<%- out %>-->
-    </p>
+           <a class="ui button red small segment" href="/translate">BACK</a>
+    </div>
 </div>
+ <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>  
 </body>
 </html>

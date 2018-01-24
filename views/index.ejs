@@ -7,14 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   
-  <title>Node File Uploads</title>
+  <title>File Upload and Translate</title>
   <style>
     #viz{
       margin-left: 50px;
     }
+    body{
+      margin-bottom:80px;
+    }
        .nav-wrapper .brand-logo img {
        max-height: 64px;
        margin-left: 200px;
+      }
+      #rit{
+        float:right;
+        margin-bottom:200px;
       }
   </style>
 </head>
@@ -53,15 +60,40 @@
      <form action="/translate/hi" method="GET">
          <% if(typeof file != 'undefined'){ %>
          <!--add more links over here-->
-                 <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Translation Language</a>
+                 <a class='dropdown-button btn' id="rit" href='#' data-activates='dropdown1'>Translation Language</a>
                     <!-- Dropdown Structure -->
                     <ul id='dropdown1' class='dropdown-content'>
-                      <li><a href="/translate/hi">hindi</a></li>
-                      <li><a href="/translate/ru">russian</a></li>
-                      <!--<li class="divider"></li>-->
-                      <!--<li><a href="#!">three</a></li>-->
-                      <!--<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>-->
-                      <!--<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>-->
+                      <li><a href="/translate/hi">Hindi</a></li>
+                      <li><a href="/translate/en">English</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/translate/ru">Russian</a></li>
+                      <li><a href="/translate/bn">Bengali</a></li>
+                      <li><a href="/translate/as">Assamese</a></li>
+                      <li><a href="/translate/de">German</a></li>
+                      <li><a href="/translate/fr">French</a></li>
+                      <li><a href="/translate/ja">Japanese</a></li>
+                      <li><a href="/translate/ta">Tamil</a></li>
+                      <li><a href="/translate/th">Thai</a></li>
+                      <li><a href="/translate/tr">Turkish</a></li>
+                      <li><a href="/translate/zh">Chinese</a></li>
+                      <li><a href="/translate/it">Italian</a></li>
+                      <li><a href="/translate/el">Greek</a></li>
+                      <li><a href="/translate/he">Hebrew</a></li>
+                      <li><a href="/translate/id">Indonesian</a></li>
+                      <li><a href="/translate/pl">Polish</a></li>
+                      <li><a href="/translate/sk">Slovak</a></li>
+                      <li><a href="/translate/ro">Romanian</a></li>
+                      <li><a href="/translate/es">Spanish</a></li>
+                      <li><a href="/translate/no">Norwegian</a></li>
+                      <li><a href="/translate/da">Danish</a></li>
+                      <li><a href="/translate/nl">Dutch</a></li>
+                      <li><a href="/translate/cs">Czech</a></li>
+                      <li><a href="/translate/fil">Filipino</a></li>
+                      <li><a href="/translate/ko">Korean</a></li>
+                      <li><a href="/translate/ne">Nepali</a></li>
+                      <li><a href="/translate/sv">Swedish</a></li>
+                      <li><a href="/translate/uk">Ukrainian</a></li>
+                      <li><a href="/translate/ur">Urdu</a></li>
                     </ul>
                  <!--<button type="submit" class="btn purple center" >Translate</button>-->
                 </div>

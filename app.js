@@ -45,6 +45,11 @@ function checkFileType(file, cb){
 app.get("/",function(req,res){
     // res.render("index.ejs");
     res.sendFile(__dirname + '/public/homepage.html');
+    // res.sendFile(__dirname + '/views/contact.html');
+});
+
+app.get("/about",function(req, res) {
+    res.sendFile(__dirname + '/views/contact.html'); 
 });
 
 app.get("/translate",function(req, res) {
