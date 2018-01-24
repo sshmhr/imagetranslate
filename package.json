@@ -4,7 +4,7 @@
   "description": "convert images to text and translate it",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node app.js"
   },
   "author": "suyash mehra",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "google-tts-api": "0.0.2",
     "jade": "^1.11.0",
     "multer": "^1.3.0",
+    "path": "^0.12.7",
     "sleep": "^5.1.1"
   }
 }
